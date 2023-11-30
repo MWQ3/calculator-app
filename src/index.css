@@ -1,13 +1,109 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/*@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+*/
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+* {
+  font-family: 'Black Ops One', monospace;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #646f78;
+  background-image: linear-gradient(45deg, #646f78 0%, #c2caca 100%);
+  overflow: hidden;
+}
+
+.calc-container {
+  background-color: #000;
+  width: 330px;
+  min-height: 400px;
+  padding: 0.3rem 0.3rem;
+  outline: 2px solid black;
+  outline-offset: -1px;
+  border: 2px solid grey;
+}
+
+.display {
+  text-align: right;
+}
+
+.display p {
+  color: #ffa500;
+  word-wrap: break-word;
+}
+
+.display p:nth-of-type(1) {
+  min-height: 20px;
+}
+
+.display p:nth-of-type(2) {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.display h2, .display p {
+  margin: 0;
+  letter-spacing: 1px;
+} 
+
+.math-container {
+  display: grid;
+  grid-template-columns: 330px;
+  min-height: 350px;
+  
+}
+
+.numbers-op {
+  display: grid;
+   grid-template-columns: repeat(4, 1fr);
+}
+
+.numbers-op button {
+  padding: 1rem 1rem;
+}
+
+.num {
+  background-color: #4d4d4d;
+}
+
+#clear, #zero {
+  grid-column: span 2;
+}
+
+/*.operators {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 60px)
+}
+*/
+
+.operator {
+ background-color: rgb(102, 102, 102);
+}
+
+#equals {
+  grid-row: span 2;
+  z-index: 1;
+  background-color: rgb(0, 68, 102);
+}
+
+button {
+  border: none;
+  outline: 1px solid black;
+  color: #fff;
+  cursor: pointer;
+}
+
+#clear {
+  background-color: rgb(172, 57, 57);
+}
+
+button:hover {
+  color: #000;
+  outline: 1.5px solid #d3d3d3;
+  outline-width: 1.5px;
+  z-index: 2;
 }
